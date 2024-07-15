@@ -1,21 +1,2 @@
 #!/bin/bash
-
-# Verifica si la variable $CFILE está definida
-if [ -z "$CFILE" ]; then
-    echo "Variable \$CFILE no está definida. Por favor define el nombre del archivo C."
-    exit 1
-fi
-
-# Nombre del archivo de salida del preprocesador
-output_file="c_preprocessed.txt"
-
-# Ejecutar el preprocesador y guardar la salida en $output_file
-cpp -P "$CFILE" -o "$output_file"
-
-# Verificar si el preprocesador ejecutó correctamente
-if [ $? -eq 0 ]; then
-    echo "El archivo C fue preprocesado correctamente. Resultado guardado en $output_file."
-else
-    echo "Hubo un error al ejecutar el preprocesador en el archivo C."
-    exit 1
-fi
+betty main.c
