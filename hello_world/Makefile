@@ -21,7 +21,7 @@ $(ASMFILE): $(CFILE)
 	$(CC) -S $(CFILE) -o $(ASMFILE)
 
 # Regla para compilar el archivo C sin enlazar
-$(OBJFILE): $(CFILE)
+compila:	
 	$(CC) $(CFLAGS) -c $(CFILE) -o $(OBJFILE)
 
 # Limpiar archivos generados
